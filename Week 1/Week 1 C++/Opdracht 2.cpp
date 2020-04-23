@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-int asciiOffset = 48;
-
 // Return true if the card number is valid
 bool isValid(const std::string& cardNumber);
 
@@ -21,6 +19,12 @@ bool startsWith(const std::string& cardNumber, const std::string& substr);
 
 int main()
 {
+    /*
+    std::cout << "Creditcardnumber:";
+    std::string input;
+    std::cin >> input;
+    */
+
     std::string invalidNumber = "4388576018402626";
     std::string validNumber = "4388576018410707";
 
@@ -46,6 +50,7 @@ int main()
 // Return true if the card number is valid
 bool isValid(const std::string& cardNumber)
 {
+    //If not starts <- Etienne
     if (startsWith(cardNumber, "4") || startsWith(cardNumber, "5") || startsWith(cardNumber, "37") || startsWith(cardNumber, "6"))
     {
         int sum = sumOfDoubleEvenPlace(cardNumber) + sumOfOddPlace(cardNumber);
@@ -66,7 +71,7 @@ int sumOfDoubleEvenPlace(const std::string& cardNumber)
     for (int i = 0; i < cardNumber.length(); i += 2)
     {
         char character = cardNumber[i];
-        int number = (int)character - asciiOffset;
+        int number = (int)character - '0'; // Removed Ascii offset
         number *= 2;
         sum += getDigit(number);
     }
@@ -92,7 +97,7 @@ int sumOfOddPlace(const std::string& cardNumber)
     for (size_t i = 1; i < cardNumber.length(); i += 2)
     {
         char character = cardNumber[i];
-        int number = (int)character - asciiOffset;
+        int number = (int)character - '0'; //Removed Ascii offset
         sum += getDigit(number);
     }
     return sum;
