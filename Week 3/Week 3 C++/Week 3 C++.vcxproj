@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{A095FB42-9D7A-4C9E-A253-8B03881457C5}</ProjectGuid>
+    <ProjectGuid>{7779672C-96A4-46D8-AB9D-CA1CA962DCBC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Week2C</RootNamespace>
+    <RootNamespace>Week3C</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,12 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Largest_block.cpp" />
-    <ClCompile Include="StopWatch.cpp" />
-    <ClCompile Include="Week 2 C++.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="StopWatch.h" />
+    <ClCompile Include="Week 3 C++.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
