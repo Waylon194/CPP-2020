@@ -1,15 +1,15 @@
 #include "StopWatch.h"
 void StopWatch::start()
 {
-    startTime = high_resolution_clock::now();
+    startTime = std::chrono::high_resolution_clock::now();
 }
 
 void StopWatch::stop()
 {
-    endTime = high_resolution_clock::now();
+    endTime = std::chrono::high_resolution_clock::now();
 }
 
-duration<double> StopWatch::getElapsedTime()
+long long StopWatch::getElapsedTime()
 {
-    return duration_cast<duration<double>>(endTime - startTime);
+    return std::chrono::duration_cast<std::chrono::seconds>>(endTime - startTime).count();
 }
